@@ -21,7 +21,7 @@ const (
 )
 
 func setupStdin() {
-	//no buffering
+	//no buffering/
 	err := exec.Command("stty", "-F", "/dev/tty", "cbreak", "min", "1").Run()
 	if err != nil {
 		log.Fatalln("fatal error: cannot disable shell buffering")
